@@ -1,27 +1,21 @@
 package com.example.core_model
 
+import com.example.core_model.enums.CharacterClass
+import com.example.core_model.enums.School
+import com.example.core_model.enums.SourceBook
+import com.example.core_model.enums.SpellLevel
+
 data class Spell(
     val id: String,
     val name: String,
-    val level: Int,
-    val classes: List<String>,
-    val school: String,
-    val description: String
-)
-
-val mockSpell = Spell(
-    id = "1",
-    name = "Призыв животных",
-    level = 3,
-    classes = listOf("друид", "следопыт"),
-    school = "Вызов",
-    description = "Вы вызываете фейских духов, принимающих облик Зверей и появляющихся в свободном видимом вами пространстве в пределах дистанции. Выберите один из вариантов того, кто появляется:"
-)
-
-val mockSpellList = listOf(
-    mockSpell,
-    mockSpell.copy(id = "2"),
-    mockSpell.copy(id = "3"),
-    mockSpell.copy(id = "4"),
-    mockSpell.copy(id = "5")
+    val nameEnglish: String,
+    val sourceBooks: List<SourceBook>,
+    val level: SpellLevel,
+    val school: School,
+    val castingTime: String,
+    val range: String,
+    val components: String,
+    val duration: String,
+    val classes: List<CharacterClass>,
+    val description: String,
 )

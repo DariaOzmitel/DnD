@@ -11,7 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.core_designsystem.theme.DnDTheme
 import com.example.core_model.Spell
-import com.example.core_model.mockSpellList
+import com.example.core_model.mockSpells
 
 @Composable
 fun SpellListScreen(
@@ -41,6 +41,6 @@ fun SpellListScreen(
 @Composable
 private fun SpellCardListPreview() {
     DnDTheme(darkTheme = true) {
-        SpellListScreen(innerPadding = PaddingValues(8.dp), spellList = mockSpellList)
+        SpellListScreen(innerPadding = PaddingValues(8.dp), spellList = mockSpells)
     }
 }

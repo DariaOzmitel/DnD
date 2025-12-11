@@ -9,6 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.core_designsystem.R
@@ -36,10 +37,13 @@ fun SpellCard(modifier: Modifier = Modifier, spell: Spell) {
             TextBodySmall(
                 modifier = Modifier.padding(bottom = 2.dp),
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6F),
-                maxLines = MAX_LINES_OF_DESCRIPTION,
                 text = "${stringResource(R.string.level)} ${spell.level} - ${spell.classes.joinToString()}"
             )
-            TextBodyMedium(text = spell.description)
+            TextBodyMedium(
+                text = spell.description,
+                maxLines = MAX_LINES_OF_DESCRIPTION,
+                overflow = TextOverflow.Ellipsis
+            )
         }
     }
 }

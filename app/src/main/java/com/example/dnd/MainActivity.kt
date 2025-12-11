@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.core_designsystem.theme.DnDTheme
-import com.example.core_model.mockSpellList
+import com.example.core_model.mockSpells
 import com.example.feature_spell_list.presentation.SpellListScreen
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             DnDTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SpellListScreen(innerPadding = innerPadding, spellList = mockSpellList)
+                    SpellListScreen(innerPadding = innerPadding, spellList = mockSpells)
                 }
             }
         }
