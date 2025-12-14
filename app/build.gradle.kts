@@ -43,7 +43,7 @@ dependencies {
 
     implementation(project(":core_designsystem"))
     implementation(project(":core_model"))
-    implementation(project(":feature_spell_list"))
+    implementation(project(":feature_spells"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

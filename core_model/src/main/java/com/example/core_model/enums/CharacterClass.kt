@@ -13,13 +13,14 @@ enum class CharacterClass(val ru: String, val en: String) {
     SORCERER("Чародей", "Sorcerer"),
     WARLOCK("Колдун", "Warlock"),
     WIZARD("Волшебник", "Wizard"),
-    ARTIFICER("Изобретатель", "Artificer");
+    ARTIFICER("Изобретатель", "Artificer"),
+    UNDEFINED("Неизвестный", "Undefined");
 
     companion object {
-        fun fromEnglish(name: String): CharacterClass? =
-            entries.firstOrNull { it.en.equals(name, ignoreCase = true) }
+        fun fromEnglish(name: String): CharacterClass =
+            entries.firstOrNull { it.en.equals(name, ignoreCase = true) } ?: UNDEFINED
 
-        fun fromRussian(name: String): CharacterClass? =
-            entries.firstOrNull { it.ru.equals(name, ignoreCase = true) }
+        fun fromRussian(name: String): CharacterClass =
+            entries.firstOrNull { it.ru.equals(name, ignoreCase = true) } ?: UNDEFINED
     }
 }

@@ -10,11 +10,12 @@ enum class SpellLevel(val level: Int, val displayName: String) {
     LEVEL_6(6, "6 уровень"),
     LEVEL_7(7, "7 уровень"),
     LEVEL_8(8, "8 уровень"),
-    LEVEL_9(9, "9 уровень");
+    LEVEL_9(9, "9 уровень"),
+    UNDEFINED(10, "Уровень неизвестен");
 
     override fun toString() = displayName
 
     companion object {
-        fun fromInt(value: Int): SpellLevel? = entries.firstOrNull { it.level == value }
+        fun fromInt(value: Int): SpellLevel = entries.firstOrNull { it.level == value } ?: UNDEFINED
     }
 }

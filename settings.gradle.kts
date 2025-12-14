@@ -21,6 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "DnD"
 include(":app")
-include(":feature_spell_list")
+include(":feature_spells")
 include(":core_designsystem")
 include(":core_model")
+include(":core_network")

@@ -8,13 +8,14 @@ enum class School(val ru: String, val en: String) {
     EVOCATION("Воплощение", "Evocation"),
     ILLUSION("Иллюзия", "Illusion"),
     NECROMANCY("Некромантия", "Necromancy"),
-    TRANSMUTATION("Преобразование", "Transmutation");
+    TRANSMUTATION("Преобразование", "Transmutation"),
+    UNDEFINED("Неизвестная", "Undefined school");
 
     companion object {
-        fun fromEnglish(enName: String): School? =
-            entries.firstOrNull { it.en.equals(enName, ignoreCase = true) }
+        fun fromEnglish(enName: String): School =
+            entries.firstOrNull { it.en.equals(enName, ignoreCase = true) } ?: UNDEFINED
 
-        fun fromRussian(ruName: String): School? =
-            entries.firstOrNull { it.ru.equals(ruName, ignoreCase = true) }
+        fun fromRussian(ruName: String): School =
+            entries.firstOrNull { it.ru.equals(ruName, ignoreCase = true) } ?: UNDEFINED
     }
 }
