@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.core_designsystem.theme.DnDTheme
 import com.example.core_model.mockSpells
-import com.example.feature_spell_list.presentation.SpellListScreen
+import com.example.feature_spells.presentation.SpellListScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

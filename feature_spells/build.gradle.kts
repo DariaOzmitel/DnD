@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.feature_spell_list"
+    namespace = "com.example.feature_spells"
     compileSdk = 36
 
     defaultConfig {
@@ -39,6 +39,7 @@ android {
 dependencies {
     implementation(project(":core_designsystem"))
     implementation(project(":core_model"))
+    implementation(project(":core_network"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -49,6 +50,7 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.dagger)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

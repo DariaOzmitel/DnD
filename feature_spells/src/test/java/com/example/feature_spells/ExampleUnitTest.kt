@@ -1,4 +1,4 @@
-package com.example.feature_spell_list
+package com.example.feature_spells
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
