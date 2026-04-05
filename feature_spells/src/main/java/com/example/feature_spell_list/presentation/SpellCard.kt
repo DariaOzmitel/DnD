@@ -1,4 +1,4 @@
-package com.example.feature_spells.presentation
+package com.example.feature_spell_list.presentation
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
