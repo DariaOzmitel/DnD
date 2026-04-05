@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.example.core_designsystem.theme.DnDTheme
-import com.example.feature_spell_list.presentation.screens.spellList.SpellListScreen
+import com.example.feature_spell_list.presentation.screens.spell.SpellCardPreviewContent
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             DnDTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SpellListScreen(innerPadding = innerPadding)
+                    SpellCardPreviewContent()
                 }
             }
         }

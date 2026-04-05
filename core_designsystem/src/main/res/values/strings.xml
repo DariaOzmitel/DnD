@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="level">Уровень</string>
+    <string name="castingTime">Время накладывания</string>
+    <string name="range">Дистанция</string>
+    <string name="components">Компоненты</string>
+    <string name="duration">Длительность</string>
+    <string name="classes">Классы</string>
 </resources>

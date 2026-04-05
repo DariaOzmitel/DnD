@@ -5,4 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface SpellRepository {
     fun getSpells(): Flow<List<Spell>>
+    fun getSpellById(id: String): Flow<Spell>
 }

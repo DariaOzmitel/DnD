@@ -4,6 +4,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
@@ -12,7 +13,7 @@ import com.example.core_designsystem.theme.Typography
 @Composable
 fun TextTitleMedium(
     modifier: Modifier = Modifier,
-    text: String,
+    text: AnnotatedString,
     color: Color = Color.Unspecified,
     overflow: TextOverflow = TextOverflow.Clip,
     maxLines: Int = Int.MAX_VALUE,
@@ -23,6 +24,27 @@ fun TextTitleMedium(
         modifier = modifier,
         text = text,
         style = Typography.titleMedium,
+        color = color,
+        overflow = overflow,
+        maxLines = maxLines,
+        lineHeight = lineHeight,
+        textAlign = textAlign
+    )
+}
+
+@Composable
+fun TextTitleMedium(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    maxLines: Int = Int.MAX_VALUE,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    textAlign: TextAlign? = null
+) {
+    TextTitleMedium(
+        modifier = modifier,
+        text = AnnotatedString(text),
         color = color,
         overflow = overflow,
         maxLines = maxLines,

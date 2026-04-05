@@ -1,8 +1,10 @@
 package com.example.feature_spell_list.di
 
 import com.example.feature_spell_list.data.SpellRepositoryImpl
+import com.example.feature_spell_list.domain.GetSpellByIdUseCase
 import com.example.feature_spell_list.domain.GetSpellsUseCase
 import com.example.feature_spell_list.domain.SpellRepository
+import com.example.feature_spell_list.presentation.screens.spell.SpellViewModel
 import com.example.feature_spell_list.presentation.screens.spellList.SpellListViewModel
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.core.module.dsl.factoryOf
@@ -14,5 +16,8 @@ val spellsModule = module {
 
     singleOf(::SpellRepositoryImpl) bind SpellRepository::class
     factoryOf(::GetSpellsUseCase)
+    factoryOf(::GetSpellByIdUseCase)
+
     viewModelOf(::SpellListViewModel)
+    viewModelOf(::SpellViewModel)
 }
