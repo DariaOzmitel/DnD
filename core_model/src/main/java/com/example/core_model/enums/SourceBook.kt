@@ -22,7 +22,7 @@ enum class SourceBook(val code: String, val fullName: String) {
     SKT("SKT", "Storm King's Thunder");
 
     companion object {
-        fun fromCode(code: String): SourceBook? =
+        fun fromString(code: String): SourceBook? =
             entries.firstOrNull { it.code.equals(code, ignoreCase = true) }
     }
 }

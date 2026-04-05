@@ -9,7 +9,7 @@ data class Spell(
     val id: String,
     val name: String,
     val nameEnglish: String,
-    val sourceBooks: List<SourceBook>,
+    val sourceBooks: List<SourceBook>?,
     val level: SpellLevel,
     val school: School,
     val castingTime: String,

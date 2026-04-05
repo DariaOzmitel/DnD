@@ -17,11 +17,11 @@ import com.example.core_designsystem.theme.DnDTheme
 import com.example.core_designsystem.theme.elements.text.TextBodyMedium
 import com.example.core_designsystem.theme.elements.text.TextBodySmall
 import com.example.core_designsystem.theme.elements.text.TextTitleSmall
-import com.example.core_model.Spell
-import com.example.core_model.mockSpell
+import com.example.feature_spell_list.presentation.models.SpellUi
+import com.example.feature_spell_list.presentation.models.mockSpellUI
 
 @Composable
-fun SpellCard(modifier: Modifier = Modifier, spell: Spell) {
+fun SpellCard(modifier: Modifier = Modifier, spell: SpellUi) {
 
     Card(
         modifier,
@@ -37,7 +37,7 @@ fun SpellCard(modifier: Modifier = Modifier, spell: Spell) {
             TextBodySmall(
                 modifier = Modifier.padding(bottom = 2.dp),
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6F),
-                text = "${stringResource(R.string.level)} ${spell.level} - ${spell.classes.joinToString()}"
+                text = "${stringResource(R.string.level)}: ${spell.level} - ${spell.classes}"
             )
             TextBodyMedium(
                 text = spell.description,
@@ -52,7 +52,7 @@ fun SpellCard(modifier: Modifier = Modifier, spell: Spell) {
 @Composable
 private fun SpellCardPreview() {
     DnDTheme(darkTheme = true) {
-        SpellCard(spell = mockSpell)
+        SpellCard(spell = mockSpellUI)
     }
 }
 

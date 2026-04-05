@@ -19,8 +19,5 @@ enum class CharacterClass(val ru: String, val en: String) {
     companion object {
         fun fromEnglish(name: String): CharacterClass =
             entries.firstOrNull { it.en.equals(name, ignoreCase = true) } ?: UNDEFINED
-
-        fun fromRussian(name: String): CharacterClass =
-            entries.firstOrNull { it.ru.equals(name, ignoreCase = true) } ?: UNDEFINED
     }
 }
